@@ -1,4 +1,7 @@
 const gridContainer = document.querySelector(".gridContainer");
+const colourSelector = document.querySelector("#colourSelector");
+
+let colour = "#FFFFFF"
 
 function createDrawSpace() {
     for(let i=0; i<64; i++) {
@@ -18,8 +21,14 @@ function createDrawSpace() {
 
 function changeColour(e) {
     if(e.buttons == 1) {
-        e.target.style.background = "black";
+        e.target.style.background = colour;
+    } else if(e.buttons == 4) {
+        e.target.style.background = "white";
     }
 }
+
+gridContainer.addEventListener("mouseenter", function () {
+    colour = colourSelector.value;
+});
 
 createDrawSpace();
