@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: skyblue;
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    color: white;
+    font-size: 5em;
+}
+
+.gridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 16em;
+}
+
+.gridContainer div {
+    width: 2em;
+    height: 2em;
+    background-color: white;
+}
+
+.gridContainer div:hover {
+    background-color: beige;
+}
